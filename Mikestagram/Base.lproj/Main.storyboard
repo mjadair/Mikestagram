@@ -30,8 +30,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Mikestagram" prompt=" " id="wc0-Rc-hCL">
-                        <barButtonItem key="rightBarButtonItem" title="Choose Photo" id="ig8-b7-2tc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Choose Photo" id="ig8-b7-2tc">
+                            <connections>
+                                <action selector="choosePhoto" destination="BYZ-38-t0r" id="BvH-MJ-Duc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="SoN-nd-apq" id="6W2-eY-JET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
