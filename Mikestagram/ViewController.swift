@@ -27,15 +27,48 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func applySepia() {
-        guard let original = original else {
+        if original == nil {
             return
         }
         let filter = CIFilter(name: "CISepiaTone")
         filter?.setValue(0.5, forKey: kCIInputIntensityKey)
-        filter?.setValue(CIImage(image: original), forKey: kCIInputImageKey)
-        let output = filter?.outputImage
-        imageView.image = UIImage(cgImage: self.context.createCGImage(output!, from: output!.extent)!)
+   
+        display(filter: filter!)
 
+    }
+    
+    
+    @IBAction func applyNoir(){
+        if original == nil {
+                  return
+              }
+        
+        let filter = CIFilter(name: "CIPhotoEffectProcess")
+        display(filter: filter!)
+        
+    }
+    
+    
+    @IBAction func applyVintage(){
+        
+        if original == nil {
+            return
+        }
+        let filter = CIFilter(name: "CISepiaTone")
+    
+        display(filter: filter!)
+    }
+    
+    
+    func display(filter: CIFilter) {
+        
+        guard let original = original else {
+            return
+        }
+        filter.setValue(CIImage(image: original), forKey: kCIInputImageKey)
+        let output = filter.outputImage
+        imageView.image = UIImage(cgImage: self.context.createCGImage(output!, from: output!.extent)!)
+        
     }
     
     
