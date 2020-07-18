@@ -20,6 +20,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             navigationController?.present(picker, animated: true, completion: nil)
         }
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        navigationController?.dismiss(animated: true, completion: nil)
+        if let image = info[UIImagePickerController.InfoKey.originalImage]
+            as? UIImage {
+            imageView.image = image
+        }
+    }
   
 
 }
