@@ -60,8 +60,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         let filter = CIFilter(name: "CISepiaTone")
         filter?.setValue(0.5, forKey: kCIInputIntensityKey)
-        
-         print(filter)
    
         display(filter: filter!)
 
@@ -102,8 +100,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             return
         }
         let filter = CIFilter(name: "CIPixellate")
-        
-        print(filter)
     
         display(filter: filter!)
     }
