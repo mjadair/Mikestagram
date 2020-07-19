@@ -37,6 +37,15 @@
                                     <action selector="applyVintage" destination="BYZ-38-t0r" eventType="touchUpInside" id="0it-ct-zK6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXA-4A-RgP">
+                                <rect key="frame" x="276" y="501" width="83" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Pixellate"/>
+                                <connections>
+                                    <action selector="applyPixellate" destination="BYZ-38-t0r" eventType="touchUpInside" id="Anw-Xe-nKf"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOw-vv-Sbk">
                                 <rect key="frame" x="16" y="500" width="79" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -46,13 +55,13 @@
                                     <action selector="applySepia" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ln-ZE-Ivp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXA-4A-RgP">
-                                <rect key="frame" x="276" y="501" width="83" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEP-AT-y4i">
+                                <rect key="frame" x="149" y="593" width="79" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Pixellate"/>
+                                <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="applyPixellate" destination="BYZ-38-t0r" eventType="touchUpInside" id="Anw-Xe-nKf"/>
+                                    <action selector="savePhoto" destination="BYZ-38-t0r" eventType="touchUpInside" id="T05-6D-Y7m"/>
                                 </connections>
                             </button>
                         </subviews>

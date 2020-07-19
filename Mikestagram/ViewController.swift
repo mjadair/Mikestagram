@@ -117,6 +117,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             original = image
         }
     }
+    
+    
+    
+    @IBAction func savePhoto() {
+        if let image = imageView.image {
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        }
+    }
   
 
 }
