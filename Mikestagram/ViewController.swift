@@ -40,6 +40,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
+    // this is our display helper function, it takes a filter as an argument and applies it to the selected image in the Image view.
+      func display(filter: CIFilter) {
+          
+          guard let original = original else {
+              return
+          }
+          filter.setValue(CIImage(image: original), forKey: kCIInputImageKey)
+          let output = filter.outputImage
+          imageView.image = UIImage(cgImage: self.context.createCGImage(output!, from: output!.extent)!)
+          
+      }
+    
+    
     // sepia filter function
     @IBAction func applySepia() {
         if original == nil {
@@ -47,23 +60,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         let filter = CIFilter(name: "CISepiaTone")
         filter?.setValue(0.5, forKey: kCIInputIntensityKey)
+        
+         print(filter)
    
         display(filter: filter!)
 
     }
     
-    
-    // this is our display helper function, it takes a filter as an argument and applies it to the selected image in the Image view.
-    func display(filter: CIFilter) {
-        
-        guard let original = original else {
-            return
-        }
-        filter.setValue(CIImage(image: original), forKey: kCIInputImageKey)
-        let output = filter.outputImage
-        imageView.image = UIImage(cgImage: self.context.createCGImage(output!, from: output!.extent)!)
-        
-    }
     
     
     
@@ -86,6 +89,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             return
         }
         let filter = CIFilter(name: "CISepiaTone")
+    
+        display(filter: filter!)
+    }
+    
+    
+    
+    // vintage filter function
+    @IBAction func applyPixellate(){
+        
+        if original == nil {
+            return
+        }
+        let filter = CIFilter(name: "CIPixellate")
+        
+        print(filter)
     
         display(filter: filter!)
     }
